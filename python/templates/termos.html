@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Termos LGPD</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .termos-container {
+      text-align: left;
+    }
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .checkbox-container input {
+      margin-right: 10px;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container termos-container">
+    <h2>📜 Termos da Lei Geral de Proteção de Dados (LGPD)</h2>
+    <p>
+      Este site coleta nome e e-mail apenas para envio do e-book.
+      Seus dados não serão compartilhados com terceiros e serão tratados conforme as diretrizes da LGPD.
+    </p>
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="aceito">
+      <label for="aceito">Li e aceito os termos da LGPD</label>
+    </div>
+
+    <div class="center">
+      <button onclick="prosseguir()">Prosseguir</button>
+    </div>
+  </div>
+
+  <script>
+    function prosseguir() {
+      if (document.getElementById('aceito').checked) {
+        window.location.href = "/formulario";
+      } else {
+        alert("Você precisa aceitar os termos para continuar.");
+      }
+    }
+  </script>
+</body>
+</html>

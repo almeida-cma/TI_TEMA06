@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro para E-book LGPD</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>📩 Preencha seus dados</h2>
+    <form action="/submit" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required><br>
+      <input type="email" name="email" placeholder="Seu e-mail" required><br>
+      <button type="submit">Baixar E-book</button>
+    </form>
+  </div>
+</body>
+</html>
